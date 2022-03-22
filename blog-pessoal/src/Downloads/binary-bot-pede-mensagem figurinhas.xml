@@ -1,0 +1,83 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" collection="true">
+  <variables>
+    <variable type="" id="db/U/mL$(,Mb#Gj!(+BI">Welcome</variable>
+  </variables>
+  <block type="text_prompt_ext" id="m|hlF?iK@n_9l=n;9#Mk" x="0" y="0">
+    <mutation type="NUMBER"></mutation>
+    <field name="TYPE">NUMBER</field>
+    <value name="TEXT">
+      <shadow type="text" id="ume=L]xC5nk_IZre}lx}">
+        <field name="TEXT">🎯 Stake Inicial (Ex. 0.35) ⚠️</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="text_prompt_ext" id="`7H,~/NYP_%$]/]j:xe{" x="0" y="58">
+    <mutation type="NUMBER"></mutation>
+    <field name="TYPE">NUMBER</field>
+    <value name="TEXT">
+      <shadow type="text" id="=?vE~M[WyTH_pj_Te4ul">
+        <field name="TEXT">💰 Meta do Dia 🤑</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="text_prompt_ext" id="`*5|pKt_Q/rgkWqG|#kp" x="0" y="116">
+    <mutation type="NUMBER"></mutation>
+    <field name="TYPE">NUMBER</field>
+    <value name="TEXT">
+      <shadow type="text" id=",8Zw;36fyYtFob|G.;hf">
+        <field name="TEXT">❌Stop Loss  (Ex. 35) ❌</field>
+      </shadow>
+    </value>
+  </block>
+  <block type="tick_analysis" id="DG*!rJ^#sS7O7wG@RTSY" collapsed="true" x="0" y="174">
+    <statement name="TICKANALYSIS_STACK">
+      <block type="controls_if" id="OdwkskdzS5ZX7!`Y;vo1">
+        <value name="IF0">
+          <block type="logic_compare" id="Xl%=l$[Q7E(!]Pp.`TPt">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="variables_get" id="G%3p;b9_H3fbG!v@!I;4">
+                <field name="VAR" id="db/U/mL$(,Mb#Gj!(+BI" variabletype="">Welcome</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="logic_null" id="iiZ|09H=xP3vu}TXX6CT"></block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="notify" id="fOl^t+cdRW*81iIq}!%.">
+            <field name="NOTIFICATION_TYPE">success</field>
+            <field name="NOTIFICATION_SOUND">silent</field>
+            <value name="MESSAGE">
+              <shadow type="text" id="Llc_CM.4#%@-@VEU|ak*">
+                <field name="TEXT">❌💰🤑🎯⚠️ MEGABOT</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="notify" id="|#ER7IVq#F?Rr;~$:pXp">
+                <field name="NOTIFICATION_TYPE">success</field>
+                <field name="NOTIFICATION_SOUND">silent</field>
+                <value name="MESSAGE">
+                  <shadow type="text" id="+)h6J{@h:@)@#5Aj.Xp5">
+                    <field name="TEXT">Bem-vindo ao Mega Bot</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="variables_set" id="Pm8)lZg{JEg{~f3I/1en">
+                    <field name="VAR" id="db/U/mL$(,Mb#Gj!(+BI" variabletype="">Welcome</field>
+                    <value name="VALUE">
+                      <block type="text" id="|O@p27[*GH2fr`7-w8_`">
+                        <field name="TEXT">Done</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
